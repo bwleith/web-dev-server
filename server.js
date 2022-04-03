@@ -4,12 +4,7 @@ import helloController  from "./controllers/hello-controller.js";
 import userController   from "./controllers/user-controller.js";
 import tuitsController  from "./controllers/tuits-controller.js";
 const app = express();
-
-app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', '*');
-    next();
-});
-
+app.use(cors());
 app.use(express.json());
 helloController(app);
 userController(app);
