@@ -14,7 +14,6 @@ const createTuit = (req, res) => {
 
 
 const findAllTuits = (req, res) => {
-    res.setHeader('Access-Control-Allow-Origin', '*');
     res.json(tuits);
 }
 
