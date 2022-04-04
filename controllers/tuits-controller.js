@@ -13,8 +13,10 @@ const createTuit = (req, res) => {
 }
 
 
-const findAllTuits = (req, res) =>
+const findAllTuits = (req, res) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
     res.json(tuits);
+}
 
 const updateTuit = (req, res) => {
     const tuitdIdToUpdate = req.params.tid;
